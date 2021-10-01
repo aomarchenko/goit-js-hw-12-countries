@@ -1,4 +1,4 @@
-<h1>{{0.name}}</h1>
+{{!-- <h1>{{0.name}}</h1>
 <div>
   <ul>
     <li>Capital: {{0.capital}}</li>
@@ -13,5 +13,26 @@
 
   </ul>
 
-  <img src='{{0.flag}}' alt='{{0.name}} flag' />
-</div>
+  <img src='{{0.flags}}' alt='{{0.name}} flag' />
+</div> --}}
+
+{{#each this}}
+  <div>
+    <h1>{{name.common}}</h1>
+    <div>
+      <div>
+        <p>Capital: {{capital}}</p>
+        <p>Population: {{population}}</p>
+        <p>Languages:</p>
+        <ul>
+          {{#each languages}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div>
+       <img src="{{flags.[0]}}" alt="flag {{name.common}}" width="500px">
+      </div>
+    </div>
+  </div>
+{{/each}}

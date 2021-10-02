@@ -30,7 +30,7 @@ function searchQuery(e) {
     } else if (data.length > 10) {
       alert({ text: 'Too many matches found. Please enter a more specific query!' });
     } else if (data.status === 404) {
-      alert({ text: 'There is no country exist with such name. Check your input' });
+      error({ text: 'There is no country exist with such name. Check your input' });
     }
   });
 }

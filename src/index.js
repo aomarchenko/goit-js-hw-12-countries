@@ -20,15 +20,19 @@ function searchQuery(e) {
   let query;
   console.log(e.target.value);
   query = e.target.value;
-  fetchCountries(query).then(console.log);
+  fetchCountries(query).then(data => {
+    const markup = countryCardTemplate(data);
+    if (data.length === 1) cardContainer.innerHTML = markup;
+    // else if (data.length > 1)const markup = countryCardTemplate(data);
+  });
 }
 // searchQuery();
 // fetchCountries(searchQuery).then(console.log);
-error({ text: 'Too many matches found. Please enter a more specific query!' });
+// error({ text: 'Too many matches found. Please enter a more specific query!' });
 
 // let array = [];
 // fetchCountries(searchQuery).then(data => {
-//   searchQuery = searchQuery.target.value;
+//
 //   const markup = countryCardTemplate(data);
 //   console.log(markup);
 //   cardContainer.innerHTML = markup;

@@ -1,11 +1,5 @@
 export default function fetchCountries(searchQuery) {
-  searchQuery = searchQuery.target.value;
-  return fetch(`https://restcountries.com/v3/name/${searchQuery}`)
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      const markup = countryCardTemplate(data);
-      console.log(markup);
-    });
+  return fetch(`https://restcountries.com/v3/name/${searchQuery}`).then(response => {
+    return response.json();
+  });
 }

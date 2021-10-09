@@ -1,4 +1,5 @@
 import './sass/main.scss';
+
 import fetchCountries from './js/fetchCountries';
 import countryCardTemplate from './templates/country-card.hbs';
 import countryListTemplate from './templates/countries-list.hbs';

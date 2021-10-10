@@ -29,6 +29,8 @@
   "dependencies": {
     "@pnotify/mobile": "^5.2.0",
     "elegant-spinner": "^3.0.0",
+    "firebase": "^9.1.2",
+    "firebaseui": "^5.0.0",
     "handlebars": "^4.7.7",
     "lodash.debounce": "^4.0.8",
     "log-update": "^4.0.0",
